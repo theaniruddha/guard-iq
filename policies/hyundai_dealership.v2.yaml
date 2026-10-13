@@ -1,0 +1,54 @@
+business_type: hyundai dealership
+intent: customer facing chatbot that answers questions only related to products
+version: 2
+knowledge_version: '1'
+input_rules:
+- id: input_rule_1
+  side: input
+  bucket: block
+  intent: abuse
+  message: null
+  route_to: null
+  severity: high
+  rationale: block abusive language
+  source: taxonomy:hyundai_dealership@v1
+  pii_delegate: null
+  needs_review: false
+  review_status: approved
+- id: input_rule_2
+  side: input
+  bucket: steer
+  intent: out_of_scope
+  message: Sorry, we can't answer that. Please contact our customer service.
+  route_to: human_handoff
+  severity: medium
+  rationale: redirect out-of-scope requests
+  source: taxonomy:hyundai_dealership@v1
+  pii_delegate: null
+  needs_review: true
+  review_status: approved
+output_rules:
+- id: output_rule_1
+  side: output
+  bucket: pass_through
+  intent: product_info
+  message: null
+  route_to: null
+  severity: low
+  rationale: allow product information
+  source: taxonomy:hyundai_dealership@v1
+  pii_delegate: null
+  needs_review: false
+  review_status: approved
+- id: output_rule_2
+  side: output
+  bucket: block
+  intent: price_commitment
+  message: We can't provide pricing information. Please contact our sales team.
+  route_to: null
+  severity: high
+  rationale: block price commitments
+  source: taxonomy:hyundai_dealership@v1
+  pii_delegate: null
+  needs_review: false
+  review_status: approved

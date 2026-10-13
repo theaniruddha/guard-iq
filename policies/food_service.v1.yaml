@@ -1,0 +1,70 @@
+business_type: food_service
+intent: Answer menu questions and help with orders
+version: 1
+knowledge_version: taxonomy:food@v1
+input_rules:
+  - id: input_abuse_jailbreak
+    side: input
+    bucket: block
+    intent: detect abuse jailbreak ignore instructions DAN safety bypass attempts
+    message: I can't help with that request.
+    route_to: null
+    severity: high
+    rationale: Standard abuse and jailbreak protection for customer-facing bots.
+    source: taxonomy:food@v1
+    pii_delegate: null
+    needs_review: false
+    review_status: approved
+  - id: input_pii
+    side: input
+    bucket: block
+    intent: detect personal information email phone credit card in user message
+    message: Please don't share personal information here.
+    route_to: null
+    severity: high
+    rationale: PII in user messages must be blocked and handled by Presidio.
+    source: taxonomy:food@v1
+    pii_delegate: presidio:PERSON,EMAIL,PHONE_NUMBER,CREDIT_CARD
+    needs_review: false
+    review_status: approved
+  - id: input_refund_request
+    side: input
+    bucket: steer
+    intent: detect user requests for "refund" "money back" "chargeback"
+    message: Refund requests need a team member. I can connect you with someone who can help.
+    route_to: human_handoff
+    severity: medium
+    rationale: Refunds require human authorization; bot must not commit.
+    source: taxonomy:food@v1
+    pii_delegate: null
+    needs_review: true
+    review_status: approved
+output_rules:
+  - id: output_price_commitment
+    side: output
+    bucket: block
+    intent: detect model reply offering guaranteed price discount refund commitment
+      "i guarantee" "i promise" "guaranteed" "price match" "i'll secure" "special
+      deal" "lock in"
+    message: I can't confirm pricing or promotions. Please check with our team for current offers.
+    route_to: null
+    severity: high
+    rationale: Unverified price or discount claims create legal and reputational risk.
+    source: taxonomy:food@v1
+    pii_delegate: null
+    needs_review: true
+    review_status: approved
+  - id: output_allergen_guarantee
+    side: output
+    bucket: steer
+    intent: detect model reply guaranteeing allergen safety "nut-free" "gluten-free"
+      "no gluten" "no nuts" "dairy-free" "allergen-free" "completely safe" "free of
+      dairy" "contains no"
+    message: For allergen questions, please speak with our staff who can verify ingredients.
+    route_to: human_handoff
+    severity: high
+    rationale: Allergen guarantees require verified kitchen knowledge.
+    source: taxonomy:food@v1
+    pii_delegate: null
+    needs_review: true
+    review_status: approved

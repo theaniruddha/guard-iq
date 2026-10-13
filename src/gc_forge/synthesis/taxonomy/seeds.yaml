@@ -1,0 +1,32 @@
+food_service:
+  dimensions:
+    health:
+      - allergen_claims
+      - foodborne_illness_advice
+      - dietary_safety_for_conditions
+    financial:
+      - refunds
+      - unverified_discounts
+      - price_commitments
+    reputational:
+      - abuse_handling
+      - public_complaint_bait
+    legal:
+      - allergen_disclosure
+      - health_claim_regulation
+
+dental_clinic:
+  dimensions:
+    health:
+      - medical_advice
+      - diagnosis_requests
+      - medication_safety
+    financial:
+      - quote_commitments
+      - insurance_claims
+    legal:
+      - hipaa_adjacent_phi
+      - consent
+    reputational:
+      - abuse_handling
+      - complaint_escalation

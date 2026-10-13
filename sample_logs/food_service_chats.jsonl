@@ -1,0 +1,34 @@
+{"conversation_id": "c01", "role": "user", "text": "Hi, how many loyalty points do I have on my account?"}
+{"conversation_id": "c01", "role": "assistant", "text": "Great news! You have 500 loyalty points, enough for a free pizza!", "feedback": "negative"}
+{"conversation_id": "c01", "role": "user", "text": "That's not right, I checked yesterday and had 120. Can I talk to a human?"}
+{"conversation_id": "c02", "role": "user", "text": "What's my rewards balance? I want to redeem points for garlic bread."}
+{"conversation_id": "c02", "role": "assistant", "text": "Your rewards balance is 1,200 points — plenty for garlic bread!", "flag": "bad_response"}
+{"conversation_id": "c02", "role": "user", "text": "You already said something different last time. This doesn't help."}
+{"conversation_id": "c03", "role": "user", "text": "Can you check my loyalty point balance please"}
+{"conversation_id": "c03", "role": "assistant", "text": "I'm not sure I can see your loyalty point balance from here, sorry."}
+{"conversation_id": "c03", "role": "user", "text": "Why can't you? The app says to ask the chat. Useless."}
+{"conversation_id": "c04", "role": "user", "text": "Do you do catering for large parties? I need food for 60 people next Saturday."}
+{"conversation_id": "c04", "role": "assistant", "text": "I'm not able to help with catering requests, unfortunately."}
+{"conversation_id": "c04", "role": "user", "text": "Ok who do I talk to then? A real person please."}
+{"conversation_id": "c05", "role": "user", "text": "I want to place a catering order for an office event, about 45 people."}
+{"conversation_id": "c05", "role": "assistant", "text": "Sorry, I can't take catering orders in this chat."}
+{"conversation_id": "c06", "role": "user", "text": "Hi! Can you cater a birthday party for 30 guests? What are the catering options?"}
+{"conversation_id": "c06", "role": "assistant", "text": "Unfortunately I don't have information about catering options."}
+{"conversation_id": "c06", "role": "user", "text": "That's frustrating, your website says to ask here."}
+{"conversation_id": "c07", "role": "user", "text": "Do you deliver to Maplewood? I'm just outside the city."}
+{"conversation_id": "c07", "role": "assistant", "text": "I'm not sure about our delivery area boundaries, sorry about that."}
+{"conversation_id": "c08", "role": "user", "text": "What's your delivery radius? Do you deliver to the Maplewood area?"}
+{"conversation_id": "c08", "role": "assistant", "text": "I don't have the delivery radius details available."}
+{"conversation_id": "c08", "role": "user", "text": "Asked this before and got nowhere. Can I talk to someone?"}
+{"conversation_id": "c09", "role": "user", "text": "I want a refund, my order arrived cold and late."}
+{"conversation_id": "c09", "role": "assistant", "text": "Refund requests need a team member. I can connect you with someone who can help."}
+{"conversation_id": "c09", "role": "user", "text": "Fine, let me talk to a human then."}
+{"conversation_id": "c10", "role": "user", "text": "Can I get a refund or my money back? My order was completely wrong."}
+{"conversation_id": "c10", "role": "assistant", "text": "Refund requests need a team member. I can connect you with someone who can help."}
+{"conversation_id": "c10", "role": "user", "text": "I asked this before, just get me an agent."}
+{"conversation_id": "c11", "role": "user", "text": "What toppings are on the margherita pizza?"}
+{"conversation_id": "c11", "role": "assistant", "text": "The margherita comes with tomato sauce, fresh mozzarella, and basil."}
+{"conversation_id": "c12", "role": "user", "text": "What time do you close on Sundays?"}
+{"conversation_id": "c12", "role": "assistant", "text": "We're open until 9pm on Sundays."}
+{"conversation_id": "c13", "role": "user", "text": "Do you have vegan cheese as an option?"}
+{"conversation_id": "c13", "role": "assistant", "text": "Yes! We offer vegan mozzarella on any pizza for a small extra charge."}

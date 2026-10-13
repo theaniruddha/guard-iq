@@ -1,0 +1,23 @@
+# Per-role LLM routing. Override via env: GC_MODEL_<ROLE>=provider:model
+# Providers: ollama | groq   (default: Ollama Cloud — key in .env)
+roles:
+  orchestrator:
+    provider: ollama
+    model: gpt-oss:120b
+    description: Top-level synthesis orchestrator (research + draft Policy)
+  synthesis:
+    provider: ollama
+    model: gpt-oss:120b
+    description: Policy drafting agent with search tools (fallback)
+  sub_agent:
+    provider: ollama
+    model: gpt-oss:120b
+    description: Warm-start intent classification and light sub-tasks
+  redteam:
+    provider: ollama
+    model: gpt-oss:120b
+    description: Probe generation for high-severity rules
+  chat:
+    provider: ollama
+    model: gpt-oss:20b
+    description: Demo chatbot behind the guardrail engine
